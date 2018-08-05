@@ -1,0 +1,30 @@
+footer {
+  margin: 40px 0px 20px 0px;
+  padding-top: 30px;
+  background: #f8f8f8;
+}
+footer .footer-info div:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+footer .footer-info div:nth-of-type(1) a {
+  margin-right: 20px;
+}
+footer .footer-info div:not(:nth-of-type(1)) p {
+  padding-bottom: 15px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+footer .footer-info img {
+  width: 100%;
+}
+@media all and (max-width: 520px) {
+  footer p {
+    font-size: 8px;
+  }
+  footer .footer-info div:not(:nth-of-type(1)) p {
+    padding-bottom: 15px;
+    font-size: 12px;
+    padding-left: 10px;
+    min-width: 70px;
+  }
+}

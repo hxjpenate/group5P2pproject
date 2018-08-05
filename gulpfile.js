@@ -37,8 +37,15 @@ gulp.task('scripts', function () {
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js'));
 });
-
 //配置任务3:转换less改名压缩css
+gulp.task("LessTocss", function () {
+    gulp.src("src/less/*.less")
+        .pipe(less({
+            paths: [path.join(__dirname, 'less', 'includes')]
+        }))
+        .pipe(gulp.dest("dist/css"));
+});
+//配置任务4:转换less改名压缩css
 gulp.task("uglifyLess", function () {
     gulp.src("src/less/*.less")
         .pipe(less({
@@ -53,7 +60,7 @@ gulp.task("uglifyLess", function () {
         .pipe(gulp.dest("dist/css"));
 });
 
-// //配置任务4:转换sass改名压缩css
+// //配置任务5:转换sass改名压缩css
 gulp.task('sass', function () {
         gulp.src('src/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -66,7 +73,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./dist/css'));
   });
 
-//配置任务5:图片压缩
+//配置任务6:图片压缩
 gulp.task('uglifyImg', function () {
     gulp.src('src/img/*')
         .pipe(imagemin())
@@ -79,7 +86,9 @@ gulp.task('uglifyImg', function () {
 // 观察者
 gulp.task("default", function () {
     gulp.watch("src/js/*.js", ["uglifyJs"]);
+    gulp.watch("src/js/*.js", ["scripts"]);
+    gulp.watch("src/less/*.less", ["LessTocss"]);
     gulp.watch("src/less/*.less", ["uglifyLess"]);
     gulp.watch("src/sass/*.scss", ["sass"]);
-    gulp.watch("src/img/*", ["uglifyImg"]);
+    // gulp.watch("src/img/*", ["uglifyImg"]);
 });
