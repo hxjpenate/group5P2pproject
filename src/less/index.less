@@ -84,6 +84,7 @@
         
     }
 }
+// 轮播
 #carousel-example-generic{
     
     @media all and (max-width: 768px){
@@ -137,6 +138,21 @@
         
     } 
 }
+@media all and (max-width: 640px){
+    .hide640{
+        display: none;
+    }
+}
+
+@media all and (max-width: 400px){
+    .hide640{
+        display: none;
+    }
+    .hide400{
+        display: none;
+    }
+}
+
 // 文章信息
 article{
     .article-info{
@@ -160,15 +176,13 @@ article{
     }
 }
 //页脚
-footer{
- 
-    
+footer{   
     margin: 40px 0px 20px 0px;
     padding-top: 30px;
     background: #f8f8f8;
-    min-height: 200px;
     .footer-info{
         div:nth-of-type(1){
+            margin-bottom: 20px;
             a{
                 margin-right: 20px;
             }
@@ -184,20 +198,6 @@ footer{
 
     }
     
-    @media all and (max-width: 768px){
-        p{
-            font-size: 10px;
-        }
-        .footer-info{
-             div:not(:nth-of-type(1)) p{
-                 padding-bottom: 15px; 
-                 font-size: 12px; 
-                 padding-left: 10px;
-                 min-width: 70px;
-             }
- 
-         }
-     }
      @media all and (max-width: 520px){
         p{
             font-size: 8px;
