@@ -1,0 +1,215 @@
+@colorWhite:#fff;
+@colorBlue:#00a8ff;
+@imgpath:"../../static/images/";
+
+
+// 标题公共样式
+.title{
+    display: flex;
+    color: #2e8ece;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 16px;
+    padding-top: 20px;
+    h3{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        line-height: 36px;
+        border-bottom: 3px solid #2e8ece;
+    }
+    p{
+        margin: 0px;
+        a{
+            line-height: 40px;
+        } 
+    }
+}
+
+//辅助导航
+.navbar{
+    border-radius:0px;
+    margin-bottom:0px;
+}
+.navbar-inverse{
+    .navbar-brand{
+        color: @colorWhite;
+        font-size: 26px;
+        font-style: italic;
+        span{
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    }
+    
+    .navbar-nav{
+        &>li>a{
+                color:@colorWhite;
+                
+                &:hover{
+                    color: @colorBlue;
+                    text-decoration: underline;
+                }
+            
+            }
+    }
+}
+
+//主导航
+.navbar-default{
+    min-height: 80px;
+    margin-bottom: 10px;
+    .navbar-header{
+        margin-bottom: 22px;
+        .navbar-brand{
+            padding: 20px 15px;
+        }
+        .navbar-toggle{
+            top: 12px;
+        }
+    }
+    .navbar-nav{
+       
+        &>li>a{
+                line-height: 50px;
+                min-width: 80px;
+                font-size: 16px;
+                text-align: center;
+                
+                &:hover{
+                    background-color: #f0f0f0;
+                }
+            }
+        
+    }
+}
+#carousel-example-generic{
+    
+    @media all and (max-width: 768px){
+        .carousel-indicators{
+            display: none;
+        }
+        .carousel-control{
+            display: none;
+        }
+    }
+    .carousel-indicators{
+        bottom: 0px;
+    }
+  
+}
+
+// 三大权益
+#three-equities{
+    margin-top:20px;
+    .row{
+        
+        div{
+            background: url("@{imgpath}feature01.png") no-repeat left center;
+            min-height: 65px;
+            padding-left: 80px;
+            margin-bottom: 20px;
+            
+            h4{
+              font-weight: bold;  
+            }
+        }
+        
+        div:nth-of-type(2){
+           background-image: url("@{imgpath}feature02.png"); 
+        }
+        
+        div:nth-of-type(3){
+           background-image: url("@{imgpath}feature03.png"); 
+        }
+    }
+}
+
+//投资信息列表
+#invest-list{
+    
+    table{
+        thead{
+            color: #999999;
+        }
+       
+        
+    } 
+}
+// 文章信息
+article{
+    .article-info{
+        list-style: none;
+        li{
+            line-height: 38px;
+            border-bottom: 1px dotted #eee;
+            a{
+                text-decoration: none;
+                &:hover{
+                    color: #337ab7;
+                }
+                color:#555;
+                span{
+                    float: right;
+                }
+            } 
+
+            
+        }
+    }
+}
+//页脚
+footer{
+ 
+    
+    margin: 40px 0px 20px 0px;
+    padding-top: 30px;
+    background: #f8f8f8;
+    min-height: 200px;
+    .footer-info{
+        div:nth-of-type(1){
+            a{
+                margin-right: 20px;
+            }
+        }
+        div:not(:nth-of-type(1)) p{
+            padding-bottom: 15px; 
+            font-size: 14px; 
+            padding-left: 10px;
+        }
+        img{
+            width: 100%;
+        }
+
+    }
+    
+    @media all and (max-width: 768px){
+        p{
+            font-size: 10px;
+        }
+        .footer-info{
+             div:not(:nth-of-type(1)) p{
+                 padding-bottom: 15px; 
+                 font-size: 12px; 
+                 padding-left: 10px;
+                 min-width: 70px;
+             }
+ 
+         }
+     }
+     @media all and (max-width: 520px){
+        p{
+            font-size: 8px;
+        }
+        .footer-info{
+             div:not(:nth-of-type(1)) p{
+                 padding-bottom: 15px; 
+                 font-size: 12px; 
+                 padding-left: 10px;
+                 min-width: 70px;
+             }
+ 
+         }
+     }
+}

@@ -1,54 +1,85 @@
 //引入gulp
-var gulp=require("gulp");
+var gulp = require('gulp');
 
-//引入第三方模块
-var less=require("gulp-less");
+// 引入模块
+// 压缩模块
+var uglify = require("gulp-uglify");
+// 改名模块
+var rename = require("gulp-rename");
+// less转css模块
+var less = require("gulp-less");
+// path模块 less用
+var path = require("path");
+// 压缩css模块
+var cleanCSS = require('gulp-clean-css');
+// 图片压缩模块
+var imagemin = require('gulp-imagemin');
+// js文件合并模块
+var concat = require('gulp-concat');
+// sass转css模块
 var sass = require('gulp-sass');
-var path=require("path");
-var cleanCSS=require("gulp-clean-css");
-var rename=require("gulp-rename");
-var uglify=require("gulp-uglify");
 
-//配置less编译任务
-gulp.task("lestTask",function () {
-	gulp.src("src/less/*.less") //源目录
-	.pipe(less({
-        paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-	.pipe(gulp.dest("dist/css")); //输出目录
+
+//配置任务1:压缩改名js
+gulp.task("uglifyJs", function () {
+    gulp.src("src/js/*.js") //源目录
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: ".min"
+        }))
+        .pipe(gulp.dest("dist/js")); //输出目录
 });
 
-//配置sass编译任务
-gulp.task("sassTask",function () {
-	gulp.src("src/sass/*.scss") //源目录
-	.pipe(sass().on('error', sass.logError))
-	.pipe(gulp.dest("dist/css")); //输出目录
+// 配置任务2:js文件合并
+gulp.task('scripts', function () {
+    return gulp.src('src/js/*.js')
+        .pipe(concat('all.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
 });
 
-//配置压缩css的任务
-gulp.task("minCssTask",function () {
-	gulp.src("dist/css/*.css") //源目录
-	.pipe(cleanCSS({compatibility: 'ie8'}))
-	.pipe(rename({
-		suffix:".min" //重命名加min后缀
-	}))
-	.pipe(gulp.dest("dist/css/")); //输出目录
+//配置任务3:转换less改名压缩css
+gulp.task("uglifyLess", function () {
+    gulp.src("src/less/*.less")
+        .pipe(less({
+            paths: [path.join(__dirname, 'less', 'includes')]
+        }))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
+        .pipe(rename({
+            suffix: ".min"
+        }))
+        .pipe(gulp.dest("dist/css"));
 });
 
-//配置js压缩的任务
-gulp.task("minJsTask",function () {
-	gulp.src("src/javascript/*.js") //源目录
-	.pipe(uglify()) //执行压缩
-	.pipe(rename({
-		suffix: ".min"   //执行重命名
-    })) 
-	.pipe(gulp.dest("dist/js")); //输出目录
+// //配置任务4:转换sass改名压缩css
+gulp.task('sass', function () {
+        gulp.src('src/sass/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
+        .pipe(rename({
+            suffix: ".min"
+        }))
+        .pipe(gulp.dest('./dist/css'));
+  });
+
+//配置任务5:图片压缩
+gulp.task('uglifyImg', function () {
+    gulp.src('src/img/*')
+        .pipe(imagemin())
+        .pipe(rename({
+            suffix: ".max"
+        }))
+        .pipe(gulp.dest('dist/img'))
 });
 
-//开启观察者watch
-gulp.task("default",function () {
-	gulp.watch("src/less/*.less",["lestTask"]); //观察less变化执行less编译任务
-	gulp.watch("src/sass/*.scss",["sassTask"]); //观察sass变化执行sass编译任务
-	gulp.watch("dist/css/*.css",["minCssTask"]); //观察css变化执行css压缩任务
-	gulp.watch("src/javascript/*.js",["minJsTask"]); //观察js变化执行js压缩任务
+// 观察者
+gulp.task("watcher", function () {
+    gulp.watch("src/js/*.js", ["uglifyJs","scripts"]);
+    gulp.watch("src/less/*.less", ["uglifyLess"]);
+    gulp.watch("src/sass/*.scss", ["sass"]);
+    gulp.watch("src/img/*", ["uglifyImg"]);
 });
