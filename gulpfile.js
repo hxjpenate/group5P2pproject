@@ -77,7 +77,7 @@ gulp.task('uglifyImg', function () {
 });
 
 // 观察者
-gulp.task("watcher", function () {
+gulp.task("default", function () {
     gulp.watch("src/js/*.js", ["uglifyJs","scripts"]);
     gulp.watch("src/less/*.less", ["uglifyLess"]);
     gulp.watch("src/sass/*.scss", ["sass"]);
