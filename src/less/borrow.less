@@ -1,0 +1,80 @@
+// 页头样式
+@import url("header.less");
+
+// 主要内容样式
+section{
+    margin-top: 30px;
+    .panel{
+        border: none;
+        box-shadow:none;
+        margin-bottom:4px;
+        .panel-heading{
+            min-height: 48px;
+            line-height: 48px;
+            border-radius: 0px;
+            border: none;
+            h3{
+                font-size: 24px;
+            }
+        }
+        &:nth-of-type(1){
+            .panel-heading{
+                background: #40d47e;       
+            }  
+        }
+        &:nth-of-type(2){
+            .panel-heading{
+                background: #ec7e20;       
+            }  
+        }
+        &:nth-of-type(3){
+            .panel-heading{
+                background: #2ca2ee;       
+            }  
+        }
+    
+        .panel-body{
+            min-height: 230px;
+            background: #f9f9f9;
+            a{
+                color:#337ab7;
+                font-size: 12px;
+                
+            }
+            p:nth-of-type(2){
+                font-size: 12px;
+                margin-top: 5px;
+                color: #737373;
+            }
+            div{
+                margin-left: 10px;
+                padding-left: 18px;
+                font-size: 14px;
+                color:#555;
+                margin-top: 5px;
+                background: url("@{imgpath}sequare.png") no-repeat left center;
+            }
+            button{
+                display: block;
+                border-radius: 15px;
+                width: 80px;
+                margin: 10px auto;
+                background: #00a8ff;
+                border: none;
+                &:hover{
+                    background:#008fd9;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+
+// 页脚样式
+@import url("footer.less");
