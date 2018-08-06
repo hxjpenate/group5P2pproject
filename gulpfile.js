@@ -17,7 +17,7 @@ var imagemin = require('gulp-imagemin');
 // js文件合并模块
 var concat = require('gulp-concat');
 // sass转css模块
-var sass = require('gulp-sass');
+//var sass = require('gulp-sass');
 
 
 //配置任务1:压缩改名js

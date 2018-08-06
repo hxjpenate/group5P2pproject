@@ -27,8 +27,56 @@
     include_once("./header.html");
     ?>
     <div class="container">
-        	<h1>登录页面</h1>
-    </div>
+        	
+	<!--登录界面面板-->
+    <div class="panel panel-default">
+		  <!--标题-->
+		  <div class="panel-heading">
+		      <h3 class="panel-title">用户登录</h3>
+		  </div>
+		  <!--主要内容-->
+		  <div class="panel-body">
+		       <!--表单部分-->
+			<form>
+				
+				<!--小猫图片-->
+				<div class="mxy">
+                <img class="img-responsive" src="static/images/mxy-01.png" alt="">
+			</div>
+				
+		  <div class="form-group">
+		    <label for="usename">
+		    	<span class="fa fa-user-circle">&nbsp;用户姓名</span>	
+		    </label>
+			 <input type="text" class="form-control" id="usename" placeholder="请输入您的用户名">
+		  </div>
+        <!--密码-->
+		  <div class="form-group">
+			<label for="password1">
+		    	<span class="fa fa-key">&nbsp;输入密码</span>
+			</label>
+		    <input type="password" class="form-control" id="password1" placeholder="请您输入密码">
+		  </div>
+		  
+		  <!--忘记密码?-->
+		  <div class="tool">
+	        <label for="remember">
+	          <input type="checkbox" id="remember" checked="">
+	          <span>记住用户名</span>
+	        </label>
+	        <a class="forget" href="#">忘记密码</a>
+	      </div>
+		  
+	     <!--提交按钮-->
+		<button type="submit" class="btn btn-danger">登录</button>
+	</form>
+	       
+		</div>	
+	</div>
+   </div>
+    
+    
+    
     <!-- 页脚 -->
     <?php
     include_once("./footer.html");
