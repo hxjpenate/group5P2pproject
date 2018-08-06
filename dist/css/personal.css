@@ -1,0 +1,71 @@
+.person_right-info .panel {
+  margin-top: 5px;
+  padding: 0 16px;
+}
+.person_right-info .panel .panel-heading {
+  background: #fff;
+  margin: 0;
+}
+.person_right-info .panel .panel-heading .row {
+  width: 100%;
+}
+.person_right-info .panel .panel-heading .row div {
+  min-height: 116px;
+  background: #fff;
+}
+.person_right-info .panel .panel-heading .row div:nth-of-type(1) {
+  padding: 0;
+}
+.person_right-info .panel .panel-heading .row div:nth-of-type(1) a {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding-top: 10px;
+  border: 1px solid #ccc;
+}
+.person_right-info .panel .panel-heading .row div:nth-of-type(1) a img {
+  max-width: 72px;
+}
+.person_right-info .panel .panel-heading .row div:nth-of-type(2) {
+  padding: 0;
+  margin: 0;
+}
+.person_right-info .panel .panel-body div {
+  margin-bottom: 10px;
+}
+.person_right-info .panel .panel-body .index_money p {
+  font-size: 18px;
+}
+.person_right-info .panel .panel-body .index_money p span {
+  color: #337ab7;
+}
+.person_right-info .panel .panel-body .account {
+  text-align: center;
+}
+.person_right-info .panel .panel-body .attestation {
+  margin-top: 40px;
+  border-bottom: 1px solid #ccc;
+}
+.person_right-info .panel .panel-body .attestation ul {
+  margin-bottom: 30px;
+}
+.person_right-info .panel .panel-body .attestation ul li {
+  margin: 0;
+  padding: 0;
+}
+.person_right-info .panel .panel-body .attestation ul li .bg-icon {
+  background: url(../../static/images/shiming.png) no-repeat;
+}
+.person_right-info .panel .panel-body .attestation ul li .bg-icon p {
+  margin-left: 60px;
+}
+.person_right-info .panel .panel-body .attestation ul li .bg-phone {
+  background: url(../../static/images/shouji.jpg) no-repeat;
+}
+.person_right-info .panel .panel-body .attestation ul li .bg-email {
+  background: url(../../static/images/youxiang.jpg) no-repeat;
+}
+.person_right-info .panel .panel-body .attestation ul li .bg-vip {
+  background: url(../../static/images/baozhan.jpg) no-repeat;
+}
