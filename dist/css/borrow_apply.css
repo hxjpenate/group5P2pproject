@@ -42,24 +42,24 @@
 .navbar-default .navbar-nav > li > a:hover {
   background-color: #f0f0f0;
 }
-.panel {
-  margin-top: 30px;
+section .row > div {
+  min-height: 500px;
+  background: #F4F8FA;
 }
-.panel form {
-  width: 60%;
-  margin: 0 auto;
+.list-group {
+  border-radius: 0px;
 }
-.panel form button {
-  width: 200px;
+.list-group a {
+  background: #F5F5F5;
+  color: #337ab7;
 }
-@media all and (max-width: 430px) {
-  .panel form {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .panel form button {
-    width: 100%;
-  }
+.list-group a:hover {
+  background: #fcfcfc;
+  color: #2a6394;
+}
+.list-group .item-son {
+  background: #fff;
+  padding-left: 40px;
 }
 footer {
   margin: 30px 0px 20px 0px;
