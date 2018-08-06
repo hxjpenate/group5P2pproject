@@ -53,15 +53,6 @@
 .panel form button {
   width: 200px;
 }
-.panel form .tool {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.panel form .mxy {
-  max-width: 200px;
-  margin: 0 auto;
-}
 @media all and (max-width: 430px) {
   .panel form {
     width: 100%;
