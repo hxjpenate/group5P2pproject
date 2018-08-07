@@ -55,58 +55,58 @@
                         </small>
                     </h3>
                     <div class="row">
-                        <p class="col-sm-2">
+                        <p class="col-sm-3">
                             借款金额
                         </p>
-                        <p class="col-sm-10">
+                        <p class="col-sm-9">
                             2,000.00
                         </p>
                     </div>
                     <div class="row">
-                        <p class="col-sm-2">
+                        <p class="col-sm-3">
                             年化利率
                         </p>
-                        <p class="col-sm-10">
+                        <p class="col-sm-9">
                             10.00%
                         </p>
                     </div>
                     <div class="row">
-                        <p class="col-sm-2">
+                        <p class="col-sm-3">
                             借款期限
                         </p>
-                        <p class="col-sm-10">
+                        <p class="col-sm-9">
                             3月
                         </p>
                     </div>
                     <div class="row">
-                        <p class="col-sm-2">
+                        <p class="col-sm-3">
                             投标奖励
                         </p>
-                        <p class="col-sm-10">
+                        <p class="col-sm-9">
                             0.00
                         </p>
                     </div>
                     <div class="row">
-                        <p class="col-sm-2">
+                        <p class="col-sm-3">
                             还款方式
                         </p>
-                        <p class="col-sm-10">
+                        <p class="col-sm-9">
                             按月分期还款
                         </p>
                     </div>
                     <div class="row">
-                        <p class="col-sm-2">
+                        <p class="col-sm-3">
                             最小投标
                         </p>
-                        <p class="col-sm-10">
+                        <p class="col-sm-9">
                             20.00
                         </p>
                     </div>
                     <div class="row">
-                        <p class="col-sm-2">
+                        <p class="col-sm-3">
                             剩余时间
                         </p>
-                        <p class="col-sm-10">
+                        <p class="col-sm-9">
 
                         </p>
                     </div>
