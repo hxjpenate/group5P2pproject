@@ -1,0 +1,122 @@
+// 页头样式
+@import url("header.less");
+
+// 个人中心页面样式
+section{
+    margin-top: 10px;
+    .sin-info{
+        &>div:nth-of-type(1){
+            .panel-body{
+                img{
+                    display: block;
+                    margin: 0 auto;
+                    width: 100px;    
+                }
+                p{
+                    margin: 0px;
+                    i{
+                        color: #5cb85c;
+                    }
+                }
+                &>a{
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &>div:nth-of-type(2){
+            p{
+                margin-bottom: 14px;
+            }
+            &>h3{
+                margin-top: 0px;
+                margin-bottom: 20px;
+                color: #09d;
+            }
+            .row{
+                p:nth-of-type(1){
+                    color: #999;
+                }
+                p:nth-of-type(2){
+                    color: #09d;
+                }
+            }
+        }
+        &>div:nth-of-type(3){
+            .row{
+                padding: 0 15px;
+                p{
+                    padding: 0px;
+                    margin: 2px 0px;
+                }
+                p:nth-of-type(1){
+                    color: #999;
+                }
+                p:nth-of-type(2){
+                    color: #09d;
+                }
+            }
+            h4{
+                color: #09d;
+            }
+           
+        }
+
+        
+    }
+    // 借款人信息
+    .borrower-info{
+        .panel-body{
+            .row{
+                padding: 0 15px;
+                p{
+                    padding: 0px;
+                    margin: 2px 0px;
+                }
+                p:nth-of-type(n){
+                    color: #999;
+                }
+                p:nth-of-type(2n){
+                    color: #09d;
+                }
+            }
+        }
+    }
+    // 审核认证信息
+    .approve-info{
+        .panel-body{
+            .row{
+                padding: 0 15px;
+                p{
+                    padding: 0px;
+                    margin: 2px 0px;
+                }
+                p:nth-of-type(n){
+                    color: #999;
+                }
+                p:nth-of-type(2n){
+                    color: #09d;
+                }
+            }
+        }
+    }
+    // 表格响应样式
+    
+    @media all and (max-width: 420px) {
+       .hide420{
+           display: none;
+       }
+    }
+    
+    // 投标记录
+    &>div:last-of-type{
+        table{
+            tr>td:nth-of-type(3){
+                color: #09d;
+            }
+        }
+    }
+}
+// 页脚样式
+@import url("footer.less");

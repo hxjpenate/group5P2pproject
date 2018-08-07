@@ -5,9 +5,70 @@
 
 // 借款页面样式
 section{
-    .row>div{
+    margin-top: 5px;
+    &>.row>div{
         min-height: 500px;
-        background: #F4F8FA;
+        
+        &:nth-of-type(2){
+            
+            .title{
+                padding: 20px;
+                margin-bottom: 20px;
+                background: #F4F8FA;
+                border-left: 2px solid #09d;
+                h3{
+                    color: #09d;
+                }
+                p{
+                    color: #31708f;
+                    span{
+                        color: #a94442;
+                    }
+                }
+            }
+            &>h3{
+                font-weight:200;
+                margin: 40px 0px 20px 0px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #eee;
+                span{
+                    width: 64px;
+                }
+            }
+            &>form{
+                padding: 0px 20px;
+                textarea{
+                    
+                    width: 100%;
+                    resize: none;
+                }
+                position: relative;
+                #correlative{
+                    width: 300px;
+                    padding: 20px 30px;
+                    box-shadow: 0px 0px 20px #ccc;
+                    position: absolute;
+                    top: 0px;
+                    right: 100px;
+                }
+                @media all and (max-width: 1200px){
+                    #correlative{
+                        width: 200px;
+                        // display: none;
+                    }
+                }
+                @media all and (max-width: 992px){
+                    #correlative{                   
+                        display: block;
+                        position: static;
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+                 
+            }
+           
+        }   
     }
 }
 // 个人中心的左边栏
