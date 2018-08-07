@@ -1,0 +1,69 @@
+// 页头样式
+@import url("header.less");
+
+//投资列表
+.panel{
+    //与导航栏之间的间距
+    margin-top: 30px;
+    
+    
+    
+    .panel-body {
+        //标的状态样式
+       p{
+           display: inline-block;
+           margin-right: 30px;
+       }
+       //button样式
+       div{
+           button{
+               display: inline-block;
+               width: 100px;
+           }
+       }
+       //分页样式
+       .pagination{
+          
+       }
+    }   
+    
+    //分页
+   
+}
+//列表展示样式
+#invest-list{
+    
+    table{
+        thead{
+            color: #999999;
+        }
+       
+        
+    } 
+}
+
+@media all and (max-width: 640px){
+    .hide640{
+        display: none;
+    }
+    
+}
+
+@media all and (max-width: 470px){
+    
+    .panel{
+        .panel-body{
+        div{
+           button{
+               width: 60px;
+           }
+       }
+    }
+    }
+    
+}
+
+
+
+// 页脚样式
+@import url("footer.less");

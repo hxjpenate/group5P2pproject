@@ -45,29 +45,25 @@
 .panel {
   margin-top: 30px;
 }
-.panel form {
-  width: 60%;
-  margin: 0 auto;
+.panel .panel-body p {
+  display: inline-block;
+  margin-right: 30px;
 }
-.panel form button {
-  width: 200px;
+.panel .panel-body div button {
+  display: inline-block;
+  width: 100px;
 }
-.panel form .tool {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+#invest-list table thead {
+  color: #999999;
 }
-.panel form .mxy {
-  max-width: 200px;
-  margin: 0 auto;
-}
-@media all and (max-width: 430px) {
-  .panel form {
-    width: 100%;
-    margin: 0 auto;
+@media all and (max-width: 640px) {
+  .hide640 {
+    display: none;
   }
-  .panel form button {
-    width: 100%;
+}
+@media all and (max-width: 470px) {
+  .panel .panel-body div button {
+    width: 60px;
   }
 }
 footer {
