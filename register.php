@@ -39,11 +39,11 @@
 			  <!--主要内容-->
 			  <div class="panel-body">
 			       <!--表单部分-->
-				<form  id="regFrom">
+				<form  id="regFrom" method="post">
 					
 			  <div class="form-group">
-			    <label for="usename">用户姓名</label>
-			    <input type="text" class="form-control" id="usename" name="usename" placeholder="请输入您的用户名">
+			    <label for="username">用户姓名</label>
+			    <input type="text" class="form-control" id="username" name="username" placeholder="请输入您的用户名">
 			  </div>
 			  
 			    <!--密码-->
@@ -65,8 +65,8 @@
 				  </div>
 				 <!--手机号码-->
 				  <div class="form-group">
-				    <label for="tel">手机号码</label>
-				    <input type="text" class="form-control" id="tel" name="tel" placeholder="请输入您的手机号码">
+				    <label for="mobile">手机号码</label>
+				    <input type="text" class="form-control" id="mobile" name="mobile" placeholder="请输入您的手机号码">
 				  </div>
 			    <!--性别-->
 				  <div class="form-group">
@@ -109,6 +109,32 @@
     <script src="dist/js/tools.min.js"></script>
     <!--引入regForm js文件库-->
     <script src="src/js/regForm.js"></script>
+    
+<!--蒙层效果 (模态框)-->  
+
+
+<!-- Modal -->
+<div class="modal fade" id="regmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <!--模态框标题-->
+        <h4 class="modal-title"></h4>
+      </div>
+      <!--模态框内容-->
+      <div class="modal-body">
+      
+      </div>
+      <div class="modal-footer">
+      	<!--关闭按钮-->
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
 </body>
 
 </html>

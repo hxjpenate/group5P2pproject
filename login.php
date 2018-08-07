@@ -48,14 +48,14 @@
 		    <label for="usename">
 		    	<span class="fa fa-user-circle">&nbsp;用户姓名</span>	
 		    </label>
-			 <input type="text" class="form-control" id="usename" placeholder="请输入您的用户名">
+			 <input type="text"  class="form-control userinp" id="usename" placeholder="请输入您的用户名">
 		  </div>
         <!--密码-->
 		  <div class="form-group">
 			<label for="password1">
 		    	<span class="fa fa-key">&nbsp;输入密码</span>
 			</label>
-		    <input type="password" class="form-control" id="password1" placeholder="请您输入密码">
+		    <input type="password" class="form-control pwdinp" id="password1" placeholder="请您输入密码">
 		  </div>
 		  
 		  <!--忘记密码?-->
@@ -88,6 +88,20 @@
     <script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
     <!-- 引入自定义工具样式 -->
     <script src="dist/js/tools.min.js"></script>
+    <script>
+    	//登录界面小猫的动态交互效果
+	$(".userinp").focus(function(){
+		$(".mxy img").attr("src","static/images/ditou.gif")
+	})
+	
+	$(".pwdinp").focus(function(){
+		$(".mxy img").attr("src","static/images/wyj.gif")
+	})
+	$('input').blur(function(){
+		$(".mxy img").attr("src","static/images/mxy-01.png")
+	})
+    </script>
+    
 </body>
 
 </html>

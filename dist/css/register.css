@@ -52,6 +52,13 @@
 .panel form button {
   width: 200px;
 }
+#regmodal .modal-body span.glyphicon-ok {
+  font-size: 20px;
+  color: green;
+}
+#regmodal .modal-body span.glyphicon-remove {
+  color: red;
+}
 @media all and (max-width: 430px) {
   .panel form {
     width: 100%;
