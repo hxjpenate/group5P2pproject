@@ -21,6 +21,11 @@
 		<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		
+		<!--引入验证session的js文件-->
+		
+			
+		
 	</head>
 
 	<body>
@@ -124,6 +129,7 @@
 		<script src="lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<!--引入bootstrap的js库-->
 		<script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="src/js/checkSession.js"></script>
 		<!-- 引入自定义工具样式 -->
 		<script src="dist/js/tools.min.js"></script>
 	</body>
