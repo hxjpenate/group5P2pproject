@@ -7,7 +7,7 @@ $(function(){
 		
 		//根据后端返回的数据处理前端的业务逻辑
 		if(res.isSuccess){
-			
+			$("#username").text(res.username)
 		}
 		else{
 			alert(res.msg)

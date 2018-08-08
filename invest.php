@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="dist/css/invest.min.css" />
     <!-- 引入字体图标库 -->
     <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    	
+	
     <!--兼容低版本的浏览器-->
     <!--[if lt IE 9]>
         <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -124,6 +126,8 @@
     <script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript"charset="utf-8">        </script>
     <!-- 引入自定义工具样式 -->
     <script src="dist/js/tools.min.js"></script>
+    <!--引入session验证-->
+	<script src="src/js/checkSession.js"></script>
 </body>
 
 </html>

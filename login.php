@@ -72,6 +72,7 @@
 		  
 	     <!--提交按钮-->
 		<button type="submit" class="btn btn-danger">登录</button>
+		<a href="register.php">没有有账号?请先注册</a>
 	</form>
 	       
 		</div>	

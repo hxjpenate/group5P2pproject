@@ -52,7 +52,7 @@
 							</div>
 							<div class="col-lg-10 col-sm-12">
 								<p>昵 称：源代码教育</p>
-								<p>用户名：小强</p>
+								<p>用户名：<span id="username" style="font-size: 20px; color: red;"></span></p>
 								<p>最后登录时间：2016-10-25 15:30:10</p>
 							</div>
 			  			</div>
@@ -129,9 +129,12 @@
 		<script src="lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<!--引入bootstrap的js库-->
 		<script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入session验证-->
 		<script src="src/js/checkSession.js"></script>
 		<!-- 引入自定义工具样式 -->
 		<script src="dist/js/tools.min.js"></script>
+		
+		
 	</body>
 
 </html>

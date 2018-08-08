@@ -86,6 +86,7 @@
 				</div>
 				  <!--提交按钮-->
 				<button type="submit" class="btn btn-danger">注册</button>
+				<a href="login.php">已有账号?请登录</a>
 			</form>
 			       
 			</div>	
