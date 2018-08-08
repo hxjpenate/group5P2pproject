@@ -8,6 +8,9 @@
 #popupModal .modal-body {
   text-align: center;
 }
+#popupModal .modal-body .glyphicon {
+  color: green;
+}
 #popupModal .modal-body #modal-msg {
   margin: 0px;
   font-size: 20px;
