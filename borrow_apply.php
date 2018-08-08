@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="dist/css/reset.css">
     <!--引入bootstrap样式-->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+    <!--引入validator表单验证css库-->
+    <link rel="stylesheet" href="lib/bootstrapvalidator/dist/css/bootstrapValidator.min.css" />
     <!--引入借款信息页面样式-->
     <link rel="stylesheet" type="text/css" href="dist/css/borrow_apply.min.css" />
     <!-- 引入字体图标库 -->
     <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    
     <!--兼容低版本的浏览器-->
     <!--[if lt IE 9]>
         <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -48,7 +51,7 @@
                         <span class="label label-primary">信用标</span>
                     </h3>
                     <!-- 表单 -->
-                    <form class="form-horizontal" action="#" method="POST">
+                    <form class="form-horizontal" id="borrow-info" method="POST">
                         <!-- 相关费用悬浮框 -->
                         <div id="correlative">
                             <h4>相关费用</h4>
@@ -155,13 +158,20 @@
         </section>
         <!-- 页脚 -->
         <?php
-    include_once("./footer.html");
-    ?>
+            include_once("./footer.html");
+        ?>
+        <?php
+            include_once("./modal.html");
+        ?>
 
             <!--引入jquery-->
             <script src="lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
             <!--引入bootstrap的js库-->
             <script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+            <!--引入validator js库文件-->
+            <script src="lib/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+            <!-- 引入本页的js库 -->
+            <script src="dist/js/borrow_apply.min.js" type="text/javascript" charset="utf-8"></script>
             <!-- 引入自定义工具样式 -->
             <script src="dist/js/tools.min.js"></script>
 </body>
