@@ -40,6 +40,15 @@ $(function(){
 		}
 		
 	},'json')
+
+
+
+	// 主导航栏的动态激活状态
+	var reqPath=location.href;
 	
+	var mid=reqPath.split("=")[1];
+
+	$("#main_Menu ul li").eq(mid).addClass("active").siblings().removeClass("active");
 	
+		
 })
