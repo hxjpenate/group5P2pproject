@@ -42,68 +42,6 @@
 .navbar-default .navbar-nav > li > a:hover {
   background-color: #f0f0f0;
 }
-section {
-  margin-top: 30px;
-}
-section .panel {
-  border: none;
-  box-shadow: none;
-  margin-bottom: 4px;
-}
-section .panel .panel-heading {
-  min-height: 48px;
-  line-height: 48px;
-  border-radius: 0px;
-  border: none;
-}
-section .panel .panel-heading h3 {
-  font-size: 24px;
-}
-section .panel:nth-of-type(1) .panel-heading {
-  background: #40d47e;
-}
-section .panel:nth-of-type(2) .panel-heading {
-  background: #ec7e20;
-}
-section .panel:nth-of-type(3) .panel-heading {
-  background: #2ca2ee;
-}
-section .panel .panel-body {
-  min-height: 230px;
-  background: #f9f9f9;
-}
-section .panel .panel-body a {
-  color: #337ab7;
-  font-size: 12px;
-}
-section .panel .panel-body p:nth-of-type(2) {
-  font-size: 12px;
-  margin-top: 5px;
-  color: #737373;
-}
-section .panel .panel-body div {
-  margin-left: 10px;
-  padding-left: 18px;
-  font-size: 14px;
-  color: #555;
-  margin-top: 5px;
-  background: url("../../static/images/sequare.png") no-repeat left center;
-}
-section .panel .panel-body .btn {
-  display: block;
-  border-radius: 15px;
-  width: 80px;
-  margin: 10px auto;
-  color: #fff;
-  background: #00a8ff;
-  border: none;
-}
-section .panel .panel-body .btn:hover {
-  background: #008fd9;
-}
-section .panel .panel-body .btn:focus {
-  outline: none;
-}
 footer {
   margin: 30px 0px 20px 0px;
   padding-top: 30px;

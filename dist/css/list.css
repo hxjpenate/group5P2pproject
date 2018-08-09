@@ -1,15 +1,20 @@
-.list-group {
-  border-radius: 0px;
+#accordion a {
+  text-decoration: none;
 }
-.list-group a {
-  background: #F5F5F5;
-  color: #337ab7;
+#accordion .panel-body {
+  padding: 0px;
 }
-.list-group a:hover {
-  background: #fcfcfc;
-  color: #2a6394;
+#accordion .panel-body ul {
+  margin: 0px;
 }
-.list-group .item-son {
-  background: #fff;
+#accordion .panel-body ul li {
+  height: 40px;
+  line-height: 40px;
   padding-left: 40px;
+}
+#accordion .panel-body ul .active {
+  background: #337ab7;
+}
+#accordion .panel-body ul .active a {
+  color: #fff;
 }

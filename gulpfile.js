@@ -85,7 +85,7 @@ gulp.task('uglifyImg', function () {
 
 // 观察者
 gulp.task("default", function () {
-    gulp.watch("src/js/*.js", ["uglifyJs"]);
+    // gulp.watch("src/js/*.js", ["uglifyJs"]);
     // gulp.watch("src/js/*.js", ["scripts"]);
     gulp.watch("src/less/*.less", ["LessTocss"]);
     gulp.watch("src/less/*.less", ["uglifyLess"]);

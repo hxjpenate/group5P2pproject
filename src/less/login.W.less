@@ -1,0 +1,48 @@
+// 页头样式
+@import url("header.less");
+
+//注册页面的样式
+.panel{
+    //与导航栏之间的间距
+    margin-top: 30px;
+    //表单样式
+    form{
+        width: 60%;
+        margin: 0 auto;
+        
+        button{
+            width: 200px;
+        }
+       .tool{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+       }
+       //小猫图
+       .mxy{
+           max-width: 200px;
+           margin: 0 auto;
+       }
+    }
+    
+}
+
+
+@media all and (max-width: 430px){
+ .panel{
+        form{
+        width: 100%;
+        margin: 0 auto;
+        
+        button{
+            width: 100%;
+        }
+    }
+    } 
+}
+
+// 页脚样式
+@import url("footer.less");
+
+// 页脚样式
+@import url("modal.less");

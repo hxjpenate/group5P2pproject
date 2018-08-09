@@ -45,9 +45,6 @@
 section {
   margin-top: 5px;
 }
-section > .row > div {
-  min-height: 500px;
-}
 section > .row > div:nth-of-type(2) .title {
   padding: 20px;
   margin-bottom: 20px;
@@ -101,20 +98,25 @@ section > .row > div:nth-of-type(2) > form #correlative {
     margin-bottom: 20px;
   }
 }
-.list-group {
-  border-radius: 0px;
+#accordion a {
+  text-decoration: none;
 }
-.list-group a {
-  background: #F5F5F5;
-  color: #337ab7;
+#accordion .panel-body {
+  padding: 0px;
 }
-.list-group a:hover {
-  background: #fcfcfc;
-  color: #2a6394;
+#accordion .panel-body ul {
+  margin: 0px;
 }
-.list-group .item-son {
-  background: #fff;
+#accordion .panel-body ul li {
+  height: 40px;
+  line-height: 40px;
   padding-left: 40px;
+}
+#accordion .panel-body ul .active {
+  background: #337ab7;
+}
+#accordion .panel-body ul .active a {
+  color: #fff;
 }
 footer {
   margin: 30px 0px 20px 0px;
@@ -155,6 +157,9 @@ footer .footer-info img {
 }
 #popupModal .modal-body {
   text-align: center;
+}
+#popupModal .modal-body .glyphicon {
+  color: green;
 }
 #popupModal .modal-body #modal-msg {
   margin: 0px;

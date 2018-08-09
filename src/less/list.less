@@ -1,16 +1,25 @@
-// 个人中心的左边栏
-.list-group{
-    border-radius: 0px;
+#accordion{
     a{
-        background: #F5F5F5;
-        color: #337ab7;
-        &:hover{
-            background: rgb(252, 252, 252);
-            color: #2a6394;
+        text-decoration: none;
+    }
+    .panel-body{
+        padding: 0px;
+        ul{
+            margin: 0px;
+            li{
+                
+                height: 40px;
+                line-height: 40px;
+                padding-left: 40px;
+            }
+            .active{
+                background: #337ab7;
+                a{
+                    color: #fff;
+                }
+            }
         }
     }
-    .item-son{
-        background: #fff;
-        padding-left:40px;
-    }
+
 }
+

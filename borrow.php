@@ -39,7 +39,7 @@
                         <div>填写基本资料</div>
                         <div>身份认证</div>
                         <div>视频认证</div>
-                        <button type="button" class="btn btn-primary btn-sm">立即申请</button>
+                        <a type="button" href="borrow_apply.php" class="btn btn-primary btn-sm">立即申请</a>
                     </div>
                 </div>
                 <div class="panel panel-primary col-sm-4">
