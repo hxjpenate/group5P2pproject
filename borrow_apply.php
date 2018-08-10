@@ -173,7 +173,7 @@
             <!--引入validator js库文件-->
             <script src="lib/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
             <!-- 引入本页的js库 -->
-            <script src="dist/js/borrow_apply.min.js" type="text/javascript" charset="utf-8"></script>
+            <script src="src/js/borrow_apply.js" type="text/javascript" charset="utf-8"></script>
             <!-- 引入自定义工具样式 -->
             <script src="dist/js/tools.min.js"></script>
             <script src="src/js/toggle.js"></script>
