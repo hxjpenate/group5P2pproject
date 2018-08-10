@@ -31,15 +31,16 @@
     ?>
         <!--借款信息页面的主题内容 -->
         <section class="container">
-            <div class="row">
+            <div class="row" id="mainBox">
                 <!-- 左边栏的列表 -->
-                <div class="col-sm-3 left-list">
+                <div class="col-sm-3 col-xs-6 left-list">
                     <?php
                         include_once("./leftList.html");
                         ?>
                 </div>
                 <!-- 右边的信息及表单 -->
-                <div class="col-sm-9 right-info">
+                <div class="col-sm-9 col-xs-12 right-info">
+                <button  id="toggle" class="btn btn-primary btn-xs">显示列表</button>
                     <div class="title">
                         <h3>信用借款</h3>
                         <p>授信额度：
@@ -160,6 +161,7 @@
         <?php
             include_once("./footer.html");
         ?>
+        
         <?php
             include_once("./modal.html");
         ?>
@@ -174,6 +176,7 @@
             <script src="dist/js/borrow_apply.min.js" type="text/javascript" charset="utf-8"></script>
             <!-- 引入自定义工具样式 -->
             <script src="dist/js/tools.min.js"></script>
+            <script src="src/js/toggle.js"></script>
 </body>
 
 </html>

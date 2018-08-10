@@ -4,14 +4,19 @@
 
 
 // 借款页面样式
+body{
+    overflow-x: hidden;
+}
 section{
     margin-top: 5px;
-    &>.row>div{
-       
-        
+    &>.row>div{  
         &:nth-of-type(2){
-            
+            #toggle{
+                position: absolute;
+                top: 0px;
+            }
             .title{
+                
                 padding: 20px;
                 margin-bottom: 20px;
                 background: #F4F8FA;
@@ -70,6 +75,32 @@ section{
            
         }   
     }
+    @media all and (max-width: 767px){
+        #mainBox{
+            position: relative;
+            right: 54%;
+            min-height: 1150px;
+            transition: all 0.3s linear;
+            .left-list{
+             position: absolute;
+             top: 0px;
+            }
+            .right-info{
+             position: absolute;
+             top: 0px;
+             right: -50%;
+            }
+        }
+        #mainBox.active{
+            right: 0;
+        }
+    }
+    @media all and (max-width: 440px){
+        #toggle{
+            display: none;
+        }
+    }
+   
 }
 // 个人中心的左边栏
 @import url("list.less");

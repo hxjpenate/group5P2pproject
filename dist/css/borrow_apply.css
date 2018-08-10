@@ -42,8 +42,15 @@
 .navbar-default .navbar-nav > li > a:hover {
   background-color: #f0f0f0;
 }
+body {
+  overflow-x: hidden;
+}
 section {
   margin-top: 5px;
+}
+section > .row > div:nth-of-type(2) #toggle {
+  position: absolute;
+  top: 0px;
 }
 section > .row > div:nth-of-type(2) .title {
   padding: 20px;
@@ -96,6 +103,31 @@ section > .row > div:nth-of-type(2) > form #correlative {
     position: static;
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 767px) {
+  section #mainBox {
+    position: relative;
+    right: 54%;
+    min-height: 1150px;
+    transition: all 0.3s linear;
+  }
+  section #mainBox .left-list {
+    position: absolute;
+    top: 0px;
+  }
+  section #mainBox .right-info {
+    position: absolute;
+    top: 0px;
+    right: -50%;
+  }
+  section #mainBox.active {
+    right: 0;
+  }
+}
+@media all and (max-width: 440px) {
+  section #toggle {
+    display: none;
   }
 }
 #accordion a {
