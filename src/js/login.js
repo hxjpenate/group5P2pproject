@@ -77,7 +77,7 @@ $(function(){
                  	       $("#num").text(num);
                  	       if(num==0){
                  	       	clearInterval('timeid')
-                 	        location.href="personal.php";
+                 	        location.href="personal.php?aid=2&lid=0";
                  	       }
                            
                  	  },1000) 

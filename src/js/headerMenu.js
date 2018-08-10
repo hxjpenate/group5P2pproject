@@ -15,7 +15,7 @@ $(function(){
 			//如果验证成功   显示 用户名  充值 注销等导航栏
 			
 			htmlStr=`<li>
-                    <a href="personal.php"><i class="fa fa-sign-in" aria-hidden="true"></i>${res.username}</a>
+                    <a href="personal.php?aid=2&lid=0"><i class="fa fa-sign-in" aria-hidden="true"></i>${res.username}</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i>赶快充值</a>

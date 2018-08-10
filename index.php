@@ -39,14 +39,16 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="static/images/banner01.jpg" alt="这是banner1">
-                    <div class="carousel-caption">
-                    </div>
+                    <a href="register.php">
+                        <img src="static/images/banner01.jpg" alt="这是banner1">
+                    </a>
+
                 </div>
                 <div class="item">
-                    <img src="static/images/banner02.jpg" alt="这是banner2">
-                    <div class="carousel-caption">
-                    </div>
+                    <a href="#">
+                        <img src="static/images/banner02.jpg" alt="这是banner2">
+                    </a>
+
                 </div>
             </div>
 
