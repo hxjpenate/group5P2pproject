@@ -1,17 +1,28 @@
+
 $(function () {
+    // 点击隐藏
     var key = false;
     $("#toggle").click(function () {
         if (key) {
-            key = false;
-            $("#mainBox").removeClass("active");
-            $("#toggle").text("显示列表");
+            hide();
         } else {
-            key = true;
-            $("#mainBox").addClass("active");
-            $("#toggle").text("隐藏列表");
+            show();
         }
     });
+    // 显示方法
+    function show() {
+        key = true;
+        $("#mainBox").addClass("active");
+        $("#toggle").text("隐藏列表");
+    }
+    // 隐藏方法
+    function hide() {
+        key = false;
+        $("#mainBox").removeClass("active");
+        $("#toggle").text("显示列表");
+    }
 
+    // 滑动隐藏
     var startX;
     $("body").on("touchstart", function (e) {
         // console.log(e);
@@ -24,13 +35,9 @@ $(function () {
         var disX = endX - startX;
         console.log(disX);
         if (disX >= 50) {
-            key = true;
-            $("#mainBox").addClass("active");
-            $("#toggle").text("隐藏列表");
+            show();
         } else if (disX <= -50) {
-            key = false;
-            $("#mainBox").removeClass("active");
-            $("#toggle").text("显示列表");
+            hide();
         }
     });
 

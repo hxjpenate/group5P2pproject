@@ -1,4 +1,17 @@
 #accordion{
+    .panel{
+        margin-top: 0px;
+        border-radius:0px;
+    }
+    .panel:not(:last-child){
+        border-bottom: none;
+    }
+    & .panel:first-child{
+        border-radius:4px 4px 0px 0px;
+    }
+    & .panel:last-child{
+        border-radius:0px 0px 4px 4px ;
+    }
     a{
         text-decoration: none;
     }

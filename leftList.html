@@ -7,14 +7,14 @@
                                 </a>
                         </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
                                 <ul>
                                         <li class="active">
                                                 <a href="#">我要投资</a>
                                         </li>
                                         <li>
-                                                <a href="#">投资项目</a>
+                                                <a href="invest.php?aid=0&lid=1">投资项目</a>
                                         </li>
                                         <li>
                                                 <a href="#">投资记录</a>
@@ -32,17 +32,17 @@
                                 </a>
                         </h4>
                 </div>
-                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="panel-body">
                                 <ul>
                                         <li>
-                                                <a href="#">我要借款</a>
+                                                <a href="borrow_apply.php?aid=1&lid=0">我要借款</a>
                                         </li>
                                         <li>
-                                                <a href="#">借款记录</a>
+                                                <a href="request_list.php?aid=1&lid=1">借款记录</a>
                                         </li>
                                         <li>
-                                                <a href="#">还款明细</a>
+                                                <a href="borrow_info.php?aid=1&lid=2">还款明细</a>
                                         </li>
                                 </ul>
                         </div>
@@ -61,10 +61,10 @@
                         <div class="panel-body">
                                 <ul>
                                         <li>
-                                                <a href="#">账户信息</a>
+                                                <a href="personal.php?aid=2&lid=0">账户信息</a>
                                         </li>
                                         <li>
-                                                <a href="#">实名认证</a>
+                                                <a href="realAuth.php?aid=2&lid=1">实名认证</a>
                                         </li>
                                         <li>
                                                 <a href="#">银行卡管理</a>
@@ -117,10 +117,15 @@
                         <div class="panel-body">
                                 <ul>
                                         <li>
-                                                <a href="#">个人信息</a>
+                                                <a href="userInfo.php?aid=4&lid=0">个人信息</a>
                                         </li>
                                 </ul>
                         </div>
                 </div>
         </div>
 </div>
+
+<!--引入jq-->
+<script src="lib/jquery/jquery.js"></script>
+<!--引入修改头部导航菜单的js-->
+<script src="src/js/leftList.js"></script>
