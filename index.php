@@ -247,7 +247,7 @@
             <!--引入bootstrap的js库-->
             <script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
             <!-- 引入自定义工具样式 -->
-            <script src="dist/js/tools.min.js"></script>
+            <script src="src/js/tools.js"></script>
 </body>
 
 </html>
