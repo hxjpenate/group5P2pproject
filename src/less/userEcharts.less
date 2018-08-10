@@ -1,0 +1,80 @@
+// 页头样式
+@import url("header.less");
+
+
+// 借款页面样式
+body{
+    overflow-x: hidden;
+}
+section{
+    margin-top: 5px;
+    &>.row>div{  
+        &:nth-of-type(2){
+            #toggle{
+                position: absolute;
+                top: 0px;
+            }
+            .title{
+                
+                padding: 20px;
+                margin-bottom: 20px;
+                background: #F4F8FA;
+                border-left: 2px solid #09d;
+                h2{
+                    color: #09d;
+                    margin: 20px 0px;
+                }
+                p{
+                    color: #31708f;
+                    span{
+                        color: #a94442;
+                    }
+                }
+            }
+            &>h3{
+                font-weight:200;
+                margin: 40px 0px 20px 0px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #eee;
+                span{
+                    width: 64px;
+                }
+            }
+            #main{
+                border: 1px solid #eee;
+                
+            }
+        }   
+    }
+    @media all and (max-width: 767px){
+        #mainBox{
+            position: relative;
+            right: 54%;
+            min-height: 700px;
+            transition: all 0.3s linear;
+            .left-list{
+             position: absolute;
+             top: 0px;
+            }
+            .right-info{
+             position: absolute;
+             top: 0px;
+             right: -50%;
+            }
+        }
+        #mainBox.active{
+            right: 0;
+        }
+    }
+    @media all and (min-width: 768px){
+        #toggle{
+            display: none;
+        }
+    }
+   
+}
+// 个人中心的左边栏
+@import url("list.less");
+
+// 页脚样式
+@import url("footer.less");
