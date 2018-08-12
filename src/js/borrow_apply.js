@@ -1,60 +1,142 @@
 $(function () {
-    // //验证的表单id
-    // $('#borrow-info')
-    //     .bootstrapValidator({
-    //         //验证的字段
-    //         fields: {
-                               
-    //             way: {
-    //                 validators: {
-                        
-    //                 }
-    //             }
-    //         }
-    //     })
-    //     .on('success.form.bv', function (e) {
-    //         //阻止浏览器的默认行为
-    //         e.preventDefault();
-    //         //获取目标表单
-    //         var $form = $(e.target);
-    //         //得到表单的实例
-    //         var bv = $form.data('bootstrapValidator');
-    //         //通过ajax提交数据
-    //         var postUrl = "/api/userAdd.php";
-    //         var postData = $form.serialize();
+    $('#borrow-info')
+        .bootstrapValidator({
+            fields: {
+                // 借款金额
+                borrowAmount: {
+                    validators: {
+                        notEmpty: {
+                            message: '此项必须填写'
+                        },
+                         //数字
+                         digits: {
+                            message: '只能填写数字'
+                        }
+                    }
+                },
+                // 借款利息
+                currentRate: {
+                    validators: {
+                        notEmpty: {
+                            message: '此项必须填写'
+                        },
+                         //数字
+                         digits: {
+                            message: '只能填写数字'
+                        }
+                    }
+                },
+                // 最小投标
+                minAmount: {
+                    validators: {
+                        notEmpty: {
+                            message: '此项必须填写'
+                        },
+                         //数字
+                         digits: {
+                            message: '只能填写数字'
+                        }
+                    }
+                },
+                // 最大投标
+                maxAmount: {
+                    validators: {
+                        notEmpty: {
+                            message: '此项必须填写'
+                        },
+                         //数字
+                         digits: {
+                            message: '只能填写数字'
+                        }
+                    }
+                },
+                // 投标奖金
+                rewardAmount: {
+                    validators: {
+                        notEmpty: {
+                            message: '此项必须填写'
+                        },
+                         //数字
+                         digits: {
+                            message: '只能填写数字'
+                        }
+                    }
+                },
+                // 招标天数
+                disableDays: {
+                    validators: {
+                        notEmpty: {
+                            message: '此项必须填写'
+                        },
+                         //数字
+                         digits: {
+                            message: '只能填写数字'
+                        }
+                    }
+                },
+                // 借款标题
+                borrowTitle: {
+                    validators: {
+                        notEmpty: {
+                            message: '此项必须填写'
+                        }
+                    }
+                },
+                // 借款描述
+                description: {
+                    validators: {
+                        notEmpty: {
+                            message: '此项必须填写'
+                        }
+                    }
+                }
+            }
+        })
+        .on('success.form.bv', function (e) {
+            // Prevent form submission
+            e.preventDefault();
 
-    //         //2.先定义好模态框的标题  
-    //         $("#regmodal .modal-title").text("用户注册提示");
-    //         $.post(postUrl, postData, function (result) {
+            // Get the form instance
+            var $form = $(e.target);
 
-    //             if (result.isSuccess) {
-    //                 //console.log('返回的结果',result.msg)
-    //                 //1.注册成功后,显示模态框效果
-    //                 //3.定义注册成功的内容
-    //                 $("#regmodal .modal-body").html("<span class='glyphicon glyphicon-ok'></span>" + result.msg + "<span id='num'>5</span>秒后跳转....");
-
-    //                 //4.展示模态框
-    //                 $('#regmodal').modal('show');
-    //                 var num = 5;
-    //                 var timeid = setInterval(function () {
-    //                     num--;
-    //                     $("#num").text(num);
-    //                     if (num == 0) {
-    //                         clearInterval('timeid')
-    //                         location.href = "login.php";
-    //                     }
-
-    //                 }, 1000)
-    //             } else {
-    //                 $("#regmodal .modal-body").html("<span class='glyphicon glyphicon-remove'></span>" + result.msg);
-    //                 $("#regmodal .modal-body").html("<span class='glyphicon glyphicon-ok'></span>" + result.msg);
-    //                 $('#regmodal').modal('show');
-    //             }
-
-    //         }, 'json');
-    //     });
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
 
 
+            var postUrl="api/borrowAdd.php";
+            var postData=$form.serialize();
 
-    // $("#popupModal").modal("show");
+            // console.log($form,bv);
+
+            // Use Ajax to submit form data
+            console.log("提交的数据",postData);
+            $.post(postUrl,postData, function (result) {
+                $(".modal-title").text("借款提交信息");
+                console.log(result);
+                if(result.isSuccess){
+                    $("#modal-msg").html('<span class="glyphicon glyphicon-ok-circle"></span><span>借款提交成功</span>');
+                    $("#target").html("<a href='./request_list.php?aid=1&lid=1'>借款页面</a>");
+                    $("#popupModal").modal("show");
+                    // 倒计时跳转
+                    var num=3;
+                    var timeid=setInterval(function(){
+                        num--;
+                        $("#count-down").text(num);
+                        if(num==0){
+                            clearInterval(timeid);
+                            location.href="./request_list.php?aid=1&lid=1";
+                        }
+                    },1000);
+                }else{
+                    $("#modal-msg").html('<span class="glyphicon glyphicon-remove-circle"></span> <span>借款提交失败</span>');
+                    $(".modal-footer p").text("借款提交失败");
+                    $("#popupModal").modal("show");
+                }
+            },"json");
+        });
+
+
+
+
+    
 });

@@ -53,6 +53,7 @@
                     </h3>
                     <!-- 表单 -->
                     <form class="form-horizontal" id="borrow-info" method="POST">
+                     
                         <!-- 相关费用悬浮框 -->
                         <div id="correlative">
                             <h4>相关费用</h4>
@@ -66,27 +67,39 @@
                                 <span>--</span>
                             </p>
                         </div>
+                        <!-- 借款类型 -->
+                        <div class="form-group row">
+                            <label for="borrowType" class="col-sm-3 control-label">借款类型</label>
+                            <div class="input-group col-sm-3 col-xs-11">
+                                <select class="form-control" name="borrowType" id="borrowType">
+                                    <option>信用贷</option>
+                                    <option>车易贷</option>
+                                    <option>房易贷</option>
+                                </select>
+                                <span class="unit">元</span>
+                            </div>
+                        </div>
                         <!-- 借款金额 -->
                         <div class="form-group row">
-                            <label for="money" class="col-sm-3 control-label">借款金额</label>
-                            <div class="input-group col-sm-3">
-                                <input type="text" class="form-control" name="money" id="money">
-                                <div class="input-group-addon">元</div>
+                            <label for="borrowAmount" class="col-sm-3 control-label">借款金额</label>
+                            <div class="input-group col-sm-3 col-xs-11">
+                                <input type="text" class="form-control" name="borrowAmount" id="borrowAmount">
+                                <span class="unit">元</span>
                             </div>
                         </div>
                         <!-- 借款利息 -->
                         <div class="form-group row">
-                            <label for="interest" class="col-sm-3 control-label">借款利息</label>
-                            <div class="input-group col-sm-3">
-                                <input type="text" class="form-control" name="interest" id="interest">
-                                <div class="input-group-addon">%</div>
+                            <label for="currentRate" class="col-sm-3 control-label">借款利息</label>
+                            <div class="input-group col-sm-3 col-xs-11">
+                                <input type="text" class="form-control" name="currentRate" id="currentRate">
+                                <span class="unit">%</span>
                             </div>
                         </div>
                         <!-- 借款期限 -->
                         <div class="form-group row">
-                            <label for="deadline" class="col-sm-3 control-label">借款期限</label>
-                            <div class="input-group col-sm-3">
-                                <select class="form-control" name="deadline" id="deadline">
+                            <label for="monthes2Return" class="col-sm-3 control-label">借款期限</label>
+                            <div class="input-group col-sm-3 col-xs-11">
+                                <select class="form-control" name="monthes2Return" id="monthes2Return">
                                     <option>1</option>
                                     <option>3</option>
                                     <option>6</option>
@@ -94,58 +107,66 @@
                                     <option selected>12</option>
                                     <option>24</option>
                                 </select>
-                                <div class="input-group-addon">月</div>
+                                <span class="unit">月</span>
                             </div>
                         </div>
                         <!-- 还款方式 -->
                         <div class="form-group row">
-                            <label for="way" class="col-sm-3 control-label">还款方式</label>
-
+                            <label for="repayment" class="col-sm-3 control-label">还款方式</label>
+                            <div class="input-group col-sm-3 col-xs-11">
                             <label class="radio-inline">
-                                <input type="radio" name="way" id="way" value="按月分期"> 按月分期
+                                <input type="radio" name="repayment" id="repayment" value="按月分期" checked> 按月分期
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="way" id="way" value="按月到期"> 按月到期
+                                <input type="radio" name="repayment" id="repayment" value="按月到期"> 按月到期
                             </label>
-
+                            </div>
                         </div>
 
                         <!-- 最小投标 -->
                         <div class="form-group row">
-                            <label for="min-money" class="col-sm-3 control-label">最小投标</label>
-                            <div class="input-group col-sm-3">
-                                <input type="text" class="form-control" name="min-money" id="min-money">
-                                <div class="input-group-addon">元</div>
+                            <label for="minAmount" class="col-sm-3 control-label">最小投标</label>
+                            <div class="input-group col-sm-3 col-xs-11">
+                                <input type="text" class="form-control" name="minAmount" id="minAmount">
+                                <span class="unit">元</span>
+                            </div>
+                        </div>
+                        <!-- 最大投标 -->
+                        <div class="form-group row">
+                            <label for="maxAmount" class="col-sm-3 control-label">最大投标</label>
+                            <div class="input-group col-sm-3 col-xs-11">
+                                <input type="text" class="form-control" name="maxAmount" id="maxAmount">
+                                <span class="unit">元</span>
                             </div>
                         </div>
                         <!-- 投标奖金 -->
                         <div class="form-group row">
-                            <label for="bonus" class="col-sm-3 control-label">投标奖金</label>
-                            <div class="input-group col-sm-3">
-                                <input type="text" class="form-control" name="bonus" id="bonus">
-                                <div class="input-group-addon">%</div>
+                            <label for="rewardAmount" class="col-sm-3 control-label">投标奖金</label>
+                            <div class="input-group col-sm-3 col-xs-11">
+                                <input type="text" class="form-control" name="rewardAmount" id="rewardAmount">
+                                <span class="unit">%</span>
                             </div>
                         </div>
                         <!-- 招标天数 -->
                         <div class="form-group row">
-                            <label for="days" class="col-sm-3 control-label">招标天数</label>
-                            <div class="input-group col-sm-3">
-                                <input type="text" class="form-control" name="days" id="days">
-                                <div class="input-group-addon">天</div>
+                            <label for="disableDays" class="col-sm-3 control-label">招标天数</label>
+                            <div class="input-group col-sm-3 col-xs-11">
+                                <input type="text" class="form-control" name="disableDays" id="disableDays">
+                                <span class="unit">天</span>
                             </div>
                         </div>
                         <!-- 借款标题 -->
                         <div class="form-group row">
-                            <label for="title" class="col-sm-3 control-label">借款标题</label>
+                            <label for="borrowTitle" class="col-sm-3 control-label">借款标题</label>
                             <div class="input-group col-sm-6 col-xs-12">
-                                <input type="text" class="form-control" name="title" id="title">
+                                <input type="text" class="form-control" name="borrowTitle" id="borrowTitle">
                             </div>
                         </div>
                         <!-- 借款描述 -->
                         <div class="form-group row">
-                            <label for="describe" class="col-sm-3 control-label">借款描述</label>
+                            <label for="description" class="col-sm-3 control-label">借款描述</label>
                             <div class="input-group col-sm-6 col-xs-12">
-                                <textarea name="describe" id="describe" rows="4"></textarea>
+                                <textarea name="description" id="description" rows="4"></textarea>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary col-sm-offset-3">提交申请</button>

@@ -41,6 +41,26 @@ section{
                 }
             }
             &>form{
+                
+                .form-group{
+                    position: relative;
+                    .unit{
+                        display: inline-block;
+                        width: 30px;
+                        height: 34px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 34px;
+                        color: #555;
+                        text-align: center;
+                        background-color: #eee;
+                        border: 1px solid #ccc;
+                        border-radius:0px 4px 4px 0px;
+                        border-left: none;
+                        position: absolute;
+                    }
+                    
+                }
                 padding: 0px 20px;
                 textarea{
                     
@@ -54,7 +74,7 @@ section{
                     box-shadow: 0px 0px 20px #ccc;
                     position: absolute;
                     top: 0px;
-                    right: 100px;
+                    right: 80px;
                 }
                 @media all and (max-width: 1200px){
                     #correlative{
@@ -77,9 +97,9 @@ section{
     }
     @media all and (max-width: 767px){
         #mainBox{
+            min-height: 1400px;
             position: relative;
             right: 54%;
-            min-height: 1150px;
             transition: all 0.3s linear;
             .left-list{
              position: absolute;
