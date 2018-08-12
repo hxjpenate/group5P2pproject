@@ -1,38 +1,98 @@
-.user_right-info{
-    margin-top: 5px;
-    form{
-        width: 600px;
-        margin: 0 auto;
-        .form-group{
-            div{
-                    width: 300px;
-                
-            }
-            .address{
-                    width: 400px;
-                }
-            //实名认证页面的样式
-            .id_card_photo{
-                width: 500px;
-                p{
-                    color: #337ab7;
-                }
-                div{
-                   display: flex;
-                     label{
-                         border: 1px solid #ccc;
-                         text-align: center;
-                         color:#337ab7; ;
-                         padding-top: 10px;
-                         margin-right: 20px;
-                         input{
-                            opacity:0;
 
+// 页头样式
+@import url("header.less");
+
+
+// 借款页面样式
+body{
+    overflow-x: hidden;
+}
+section{
+    margin-top: 5px;
+    &>.row>div{  
+        &:nth-of-type(2){
+            #toggle{
+                position: absolute;
+                top: 0px;
+                form{
+                    width: 600px;
+                    margin: 0 auto;
+                    .form-group{
+                        div{
+                            width: 300px;
+                            
                         }
-                     }
+                    .address{
+                            width: 400px;
+                        }
+                    //实名认证页面的样式
+                    .id_card_photo{
+                        width: 500px;
+                        p{
+                            color: #337ab7;
+                        }
+                        div{
+                        display: flex;
+                            label{
+                                border: 1px solid #ccc;
+                                text-align: center;
+                                color:#337ab7; ;
+                                padding-top: 10px;
+                                margin-right: 20px;
+                                input{
+                                    opacity:0;
+
+                                }
+                            }
+                        }
+                    
+                    }
                 }
-               
+
+            }
+           
+        }   
+    }}
+    @media all and (max-width: 767px){
+        #mainBox{
+            min-height: 720px;
+            position: relative;
+            right: 54%;
+            transition: all 0.3s linear;
+            .left-list{
+             position: absolute;
+             top: 0px;
+            }
+            .right-info{
+             position: absolute;
+             top: 0px;
+             right: -50%;
             }
         }
+        #mainBox.active{
+            right: 0;
+        }
     }
+    @media all and (min-width: 768px){
+        #toggle{
+            display: none;
+        }
+    }
+   
 }
+// 个人中心的左边栏
+@import url("list.less");
+
+// 页脚样式
+@import url("footer.less");
+
+// 模态框样式
+@import url("modal.less");
+
+
+
+
+
+
+
+

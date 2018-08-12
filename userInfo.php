@@ -10,8 +10,6 @@
 	<link rel="stylesheet" href="dist/css/reset.css">
 	<!--引入bootstrap样式-->
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
-	<!--引入借款信息页面样式-->
-	<link rel="stylesheet" type="text/css" href="dist/css/borrow_apply.min.css" />
 	<!--引入完善信息页面样式-->
 	<link rel="stylesheet" type="text/css" href="dist/css/userInfo.min.css" />
 	<!-- 引入字体图标库 -->
@@ -29,14 +27,15 @@
     	include_once("./header.html");
     ?>
 		<section class="container">
-			<div class="row">
+			<div class="row" id="mainBox">
 
-				<div class="col-sm-3 left-list">
+				<div class="col-sm-3 col-xs-6 left-list">
 					<?php
                     include_once("./leftList.html");
                     ?>
 				</div>
-				<div class="col-sm-9 user_right-info">
+				<div class="col-sm-9 col-xs-12 right-info">
+				<button id="toggle" class="btn btn-primary btn-xs">显示列表</button>
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4>个人信息完善</h4>
@@ -66,38 +65,38 @@
 			<script id="userTmpl" type="text/html">
 					<div class="form-group">
 						<label for="inputEmail3" class="col-sm-2 control-label">用户账户:</label>
-						<div class="col-sm-10">
+						<div class="col-sm-8">
 							<span>${username}</span>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputEmail3" class="col-sm-2 control-label">真实姓名:</label>
-						<div class="col-sm-10">
+						<div class="col-sm-8">
 							<span>${realname}</span>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputEmail3" class="col-sm-2 control-label">证件号码:</label>
-						<div class="col-sm-10">
+						<div class="col-sm-8">
 							<span>${idnumber}</span>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">手机号码:</label>
-						<div class="col-sm-10">
+						<div class="col-sm-8">
 							<input type="text" class="form-control" id="mobile" name="mobile" value="${mobile}">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">联系电话:</label>
-						<div class="col-sm-10">
+						<div class="col-sm-8">
 							<input type="text" class="form-control" id="tel" name="tel"value="${tel}">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">个人学历:</label>
-						<div class="col-sm-10">
+						<div class="col-sm-8">
 							<select class="form-control"  id="education" name="education" value="${education}">
 								<option>${education}</option>
 								<option>小学</option>
@@ -113,7 +112,7 @@
 
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">个人收入:</label>
-						<div class="col-sm-10">
+						<div class="col-sm-8">
 							<select class="form-control" id="monthlyincome" name="monthlyincome" value="${monthlyincome}">							
 								<option>${monthlyincome}</option>
 								<option>1000元以下</option>
@@ -126,7 +125,7 @@
 					</div>
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">联系地址:</label>
-						<div class="col-sm-10 address">
+						<div class="col-sm-8 address">
 							<input type="text" class="form-control" id="address" name="address" value="${address}">
 						</div>
 					</div>
@@ -143,6 +142,7 @@
 			<script src="src/js/checkSession.js"></script>
 			<!-- 引入自定义工具样式 -->
 			<script src="dist/js/tools.min.js"></script>
+			<script src="dist/js/toggle.min.js"></script>
 			<script>
 				$.get("api/getUserInfo.php", function (userinfo) {
 					// console.log(userinfo);
