@@ -49,7 +49,7 @@
                         </p>
                     </div>
                     <h3>借款信息
-                        <span class="label label-primary">信用标</span>
+                        <small><span class="label label-primary">信用标</span></small>
                     </h3>
                     <!-- 表单 -->
                     <form class="form-horizontal" id="borrow-info" method="POST">

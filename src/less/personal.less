@@ -1,91 +1,154 @@
-.person_right-info{
-    .panel{
-    //面板头部部分样式
-         margin-top: 5px;
-         padding:0 16px;
-        .panel-heading{
-            background: #fff;
-            margin: 0;        
-            .row{
-                width: 100%;
-                div{
-                    min-height:116px; 
-                    background: #fff;
-                    &:nth-of-type(1){
-                       padding: 0;
-                        a{  
-                            display: inline-block;
-                            width: 100px;
-                            height: 100px;
-                            text-align: center;
-                            padding-top:10px;
-                            border: 1px solid #ccc;
-                            
-                            img{
-                                max-width: 72px;
+
+// 页头样式
+@import url("header.less");
+
+
+// 借款页面样式
+body{
+    overflow-x: hidden;
+}
+section{
+    margin-top: 5px;
+    &>.row>div{  
+        &:nth-of-type(2){
+            #toggle{
+                position: absolute;
+                top: 0px;
+            }
+            .panel{
+                //面板头部部分样式
+                     padding:0 16px;
+                    .panel-heading{
+                        background: #fff;
+                        margin: 0;        
+                        .row{
+                            width: 100%;
+                            div{
+                                min-height:116px; 
+                                background: #fff;
+                                &:nth-of-type(1){ 
+                                   margin-top: 10px;                               
+                                   padding: 0;
+                                    a{  
+                                        display: inline-block;
+                                        width: 100px;
+                                        height: 100px;
+                                        text-align: center;
+                                        padding-top:10px;
+                                        border: 1px solid #ccc;
+                                        
+                                        img{
+                                            max-width: 72px;
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    padding: 0;
+                                    margin: 0;
+                                }
+                                
+                           
                             }
                         }
-                    }
-                    &:nth-of-type(2){
-                        padding: 0;
-                        margin: 0;
                     }
                     
-               
-                }
-            }
-        }
-        
-    //面板内容部分样式
-        .panel-body{
-            div{
-                margin-bottom: 10px;
-            }
-            .index_money{
-                 p{
-                        font-size:18px;
-                        span{
-                            color: #337ab7;
+                //面板内容部分样式
+                    .panel-body{
+                        div{
+                            margin-bottom: 10px;
                         }
-                    }
-            }
-            .account{
-                text-align: center;
-            }
-            .attestation{
-                margin-top: 40px;
-                border-bottom: 1px solid #ccc;
-                ul{
-                    margin-bottom: 30px;
-                    li{
-                        margin: 0;
-                        padding: 0;
-                        .bg-icon{
-                            background: url(../../static/images/shiming.png) no-repeat;
-                            p{
-                                margin-left: 60px;
+                        .index_money{
+                             p{
+                                    font-size:18px;
+                                    span{
+                                        color: #337ab7;
+                                    }
+                                }
+                        }
+                        .account{
+                            text-align: center;
+                        }
+                        .attestation{
+                            margin-top: 40px;
+                            border-bottom: 1px solid #ccc;
+                            ul{
+                                margin-bottom: 30px;
+                                li{
+                                    margin: 0;
+                                    margin-top: 20px;
+                                    padding: 0;
+                                    .bg-icon{
+                                        background: url(../../static/images/shiming.png) no-repeat;
+                                        p{
+                                            margin-left: 60px;
+                                        }
+                                    }
+                                    .bg-phone{
+                                        background: url(../../static/images/shouji.jpg) no-repeat;
+                                        
+                                    }
+                                    .bg-email{
+                                        background: url(../../static/images/youxiang.jpg) no-repeat;
+                                        
+                                    }
+                                    .bg-vip{
+                                        background: url(../../static/images/baozhan.jpg) no-repeat;
+                                        
+                                    }
+                                    
+                                }
                             }
                         }
-                        .bg-phone{
-                            background: url(../../static/images/shouji.jpg) no-repeat;
-                            
-                        }
-                        .bg-email{
-                            background: url(../../static/images/youxiang.jpg) no-repeat;
-                            
-                        }
-                        .bg-vip{
-                            background: url(../../static/images/baozhan.jpg) no-repeat;
-                            
-                        }
-                        
+                       
                     }
+                    
+                    
                 }
-            }
+          
            
-        }
-        
-        
+        }   
     }
+    @media all and (max-width: 767px){
+        #mainBox{
+            min-height: 930px;
+            position: relative;
+            right: 54%;
+            transition: all 0.3s linear;
+            .left-list{
+             position: absolute;
+             top: 0px;
+            }
+            .right-info{
+             position: absolute;
+             top: 0px;
+             right: -50%;
+            }
+        }
+        #mainBox.active{
+            right: 0;
+        }
+    }
+    @media all and (min-width: 768px){
+        #toggle{
+            display: none;
+        }
+    }
+   
+}
+// 个人中心的左边栏
+@import url("list.less");
+
+// 页脚样式
+@import url("footer.less");
+
+// 模态框样式
+@import url("modal.less");
+
+
+
+
+
+.right-info{
+    
 }
 

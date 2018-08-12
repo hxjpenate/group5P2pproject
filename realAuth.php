@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="dist/css/reset.css">
     <!--引入bootstrap样式-->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
-    <!--引入借款信息页面样式-->
-    <link rel="stylesheet" type="text/css" href="dist/css/borrow_apply.min.css" />
     <!--引入完善信息页面样式-->
-    <link rel="stylesheet" type="text/css" href="dist/css/userInfo.min.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/userAuth.min.css" />
     <!-- 引入字体图标库 -->
     <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
     <!--兼容低版本的浏览器-->
@@ -29,34 +27,35 @@
     	include_once("./header.html");
     ?>
         <section class="container">
-            <div class="row">
+            <div class="row" id="mainBox">
 
-                <div class="col-sm-3 left-list">
+                <div class="col-sm-3 col-xs-6 left-list">
                     <?php
                     include_once("./leftList.html");
                     ?>
                 </div>
-                <div class="col-sm-9 user_right-info">
+                <div class="col-sm-9 col-xs-12 right-info">
+								<button id="toggle" class="btn btn-primary btn-xs">显示列表</button>
                 	<div class="panel panel-default">
 					  <div class="panel-heading"><h4>个人信息完善</h4></div>
 					  <div class="panel-body">
 					    <form class="form-horizontal">
 						  <div class="form-group">
 						    <label for="inputEmail3" class="col-sm-2 control-label">用户账户:</label>
-						    <div class="col-sm-10">
+						    <div class="col-sm-8">
 								<span >xiaoqiang</span>
 						    </div>
 						  </div>
 						  <div class="form-group">
 						    <label for="inputEmail3" class="col-sm-2 control-label">真实姓名:</label>
-						    <div class="col-sm-10">
+						    <div class="col-sm-8">
 						      <input type="text" class="form-control" name="realname">
 						    </div>
 						  </div>
 						  
 						   <div class="form-group">
 						    <label for="inputPassword3" class="col-sm-2 control-label">性别:</label>
-						    <div class="col-sm-10">
+						    <div class="col-sm-8">
 								<select class="form-control" name="sex">
 								  <option>男</option>
 								  <option>女</option>
@@ -65,7 +64,7 @@
 						  </div>
 						  <div class="form-group">
 						    <label for="inputPassword3" class="col-sm-2 control-label">证件类型:</label>
-						    <div class="col-sm-10">
+						    <div class="col-sm-8">
 								<select class="form-control" name="id_card">
 								  <option>身份证</option>
 								  <option>驾驶证</option>
@@ -75,26 +74,26 @@
 						  </div>
 						  <div class="form-group">
 						    <label for="inputEmail3" class="col-sm-2 control-label">证件号码:</label>
-						    <div class="col-sm-10">
+						    <div class="col-sm-8">
 						      <input type="text" class="form-control" name="id_num" >
 						    </div>
 						  </div>
 						   <div class="form-group">
 						    <label for="inputPassword3" class="col-sm-2 control-label">出生日期:</label>
-						    <div class="col-sm-10">
+						    <div class="col-sm-8">
 						      <input type="text" class="form-control" name="phoneNum" placeholder="xx年xx月xx日">
 						    </div>
 						  </div>
 						   
 						  <div class="form-group">
 						    <label for="inputPassword3" class="col-sm-2 control-label" >联系地址:</label>
-						    <div class="col-sm-10 address">
+						    <div class="col-sm-8">
 						      <input type="text" class="form-control" name="address" placeholder="xx省xx市xx区xx街道xx号">
 						    </div>
 						  </div>
 						  <div class="form-group">
 						    <label for="inputPassword3" class="col-sm-2 control-label" >身份证照片:</label>
-						    <div class="col-sm-10 id_card_photo">
+						    <div class="col-sm-8 id_card_photo">
 						      <p>请点击“选择图片”,选择证件的正反两面照片。</p>
 						      <div>
 							    <label>
@@ -133,6 +132,7 @@
 						<script src="src/js/checkSession.js"></script>
             <!-- 引入自定义工具样式 -->
             <script src="dist/js/tools.min.js"></script>
+            <script src="dist/js/toggle.min.js"></script>
 </body>
 
 </html>
