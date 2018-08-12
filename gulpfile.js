@@ -2,6 +2,8 @@
 var gulp = require('gulp');
 
 // 引入模块
+//引入gulp-babel
+var babel = require('gulp-babel');
 // 压缩模块
 var uglify = require("gulp-uglify");
 // 改名模块
@@ -23,6 +25,9 @@ var concat = require('gulp-concat');
 //配置任务1:压缩改名js
 gulp.task("uglifyJs", function () {
     gulp.src("src/js/*.js") //源目录
+        .pipe(babel({
+            presets: ['env']
+        }))
         .pipe(uglify())
         .pipe(rename({
             suffix: ".min"
@@ -85,7 +90,7 @@ gulp.task('uglifyImg', function () {
 
 // 观察者
 gulp.task("default", function () {
-    // gulp.watch("src/js/*.js", ["uglifyJs"]);
+    gulp.watch("src/js/*.js", ["uglifyJs"]);
     // gulp.watch("src/js/*.js", ["scripts"]);
     gulp.watch("src/less/*.less", ["LessTocss"]);
     gulp.watch("src/less/*.less", ["uglifyLess"]);
